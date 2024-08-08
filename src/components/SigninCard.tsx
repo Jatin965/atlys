@@ -6,7 +6,11 @@ import { Icon } from "@iconify/react";
 import InputField from "./UI/InputField";
 import Button from "./UI/Button";
 
-const SigninCard = () => {
+interface AuthCardProps {
+  setRegisterView: (value: boolean) => void;
+}
+
+const SigninCard: React.FC<AuthCardProps> = ({ setRegisterView }) => {
   const navigate = useNavigate();
 
   const [email, setEmail] = useState<string>("");
@@ -48,7 +52,7 @@ const SigninCard = () => {
 
         <p className="register-text">
           Not registered yet?{" "}
-          <span>
+          <span onClick={() => setRegisterView(true)}>
             Register <Icon icon="lucide:arrow-right" height={18} />
           </span>
         </p>
