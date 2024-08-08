@@ -1,4 +1,5 @@
 import React, { ChangeEvent, useState } from "react";
+import { Link } from "react-router-dom";
 
 interface InputProps {
   type?: string;
@@ -36,9 +37,9 @@ const InputField: React.FC<InputProps> = ({
   const renderForgotPasswordLink = () => {
     if (forgotPasswordLink) {
       return (
-        <a href={forgotPasswordLink} onClick={onForgotPasswordClick}>
+        <Link to={forgotPasswordLink} onClick={onForgotPasswordClick}>
           Forgot Password?
-        </a>
+        </Link>
       );
     }
     return null;

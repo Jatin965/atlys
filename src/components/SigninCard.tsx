@@ -1,7 +1,14 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+import { Icon } from "@iconify/react";
+
 import InputField from "./UI/InputField";
+import Button from "./UI/Button";
 
 const SigninCard = () => {
+  const navigate = useNavigate();
+
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
@@ -12,10 +19,15 @@ const SigninCard = () => {
   const passwordChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value);
   };
+
+  const loginHandler = () => {
+    navigate("/feed");
+  };
   return (
     <div className="bg-wrapper">
       <div className="signin-card">
         <p className="welcome-text">WELCOME BACK</p>
+        <p className="login-text">Log into your account</p>
 
         <InputField
           value={email}
@@ -29,7 +41,17 @@ const SigninCard = () => {
           label="Password"
           placeholder="Enter your password"
           type="password"
+          forgotPasswordLink="/"
         />
+
+        <Button label="Login now" onClick={loginHandler} className="login-btn" />
+
+        <p className="register-text">
+          Not registered yet?{" "}
+          <span>
+            Register <Icon icon="lucide:arrow-right" height={18} />
+          </span>
+        </p>
       </div>
     </div>
   );
