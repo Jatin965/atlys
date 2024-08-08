@@ -5,12 +5,14 @@ import { Icon } from "@iconify/react";
 
 import InputField from "./UI/InputField";
 import Button from "./UI/Button";
+import { AuthCardProps } from "../assets/helpers/types";
 
-interface AuthCardProps {
-  setRegisterView: (value: boolean) => void;
-}
 
-const SigninCard: React.FC<AuthCardProps> = ({ setRegisterView }) => {
+const SigninCard: React.FC<AuthCardProps> = ({
+  isPopup,
+  closePopup,
+  setRegisterView,
+}) => {
   const navigate = useNavigate();
 
   const [email, setEmail] = useState<string>("");
@@ -25,7 +27,9 @@ const SigninCard: React.FC<AuthCardProps> = ({ setRegisterView }) => {
   };
 
   const loginHandler = () => {
-    navigate("/feed");
+    if (isPopup) {
+      closePopup!(false);
+    } else navigate("/feed");
   };
   return (
     <div className="bg-wrapper">
