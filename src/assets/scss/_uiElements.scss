@@ -1,13 +1,40 @@
 // Input Field Start
 .input-field {
+  margin-bottom: 0.75rem;
   .label-forgot-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    label {
+      color: $theme-white-one;
+      font-size: 0.875rem;
+      line-height: 118.75%;
+      margin-bottom: 0.375rem;
+    }
   }
 
   .input-wrapper {
     position: relative;
+
+    input {
+      border: 1.5px solid $theme-border;
+      border-radius: 4px;
+      font-size: 1rem;
+      color: $theme-white-one;
+      padding: 0.625rem;
+      background: none;
+      outline: none;
+      box-shadow: none;
+      width: -moz-available;
+      width: -webkit-fill-available;
+      width: fill-available;
+
+      &::placeholder {
+        color: $theme-white-two;
+        line-height: 118.75%;
+      }
+    }
 
     .password-input {
       padding-right: 2rem;
