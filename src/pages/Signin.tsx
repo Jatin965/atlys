@@ -9,7 +9,7 @@ const Signin = () => {
       <div className="signin-container">
         <div className="card-wrapper">
           <div className="logo">
-            <img src="/logo.png" alt="" />
+            <img src="/logo.png" alt="Logo" loading="eager" />
           </div>
           {registerView ? (
             <RegisterCard setRegisterView={setRegisterView} />
