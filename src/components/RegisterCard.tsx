@@ -39,6 +39,12 @@ const RegisterCard: React.FC<AuthCardProps> = ({
         <p className="welcome-text">SIGN UP</p>
         <p className="login-text">Create an account to continue</p>
 
+        {isPopup ? (
+          <div className="close-container" onClick={() => closePopup!(false)}>
+            <Icon icon="lucide:x" />
+          </div>
+        ) : null}
+
         <InputField
           value={email}
           onChange={emailChangeHandler}

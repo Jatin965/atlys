@@ -7,7 +7,6 @@ import InputField from "./UI/InputField";
 import Button from "./UI/Button";
 import { AuthCardProps } from "../assets/helpers/types";
 
-
 const SigninCard: React.FC<AuthCardProps> = ({
   isPopup,
   closePopup,
@@ -36,6 +35,12 @@ const SigninCard: React.FC<AuthCardProps> = ({
       <div className="signin-card">
         <p className="welcome-text">WELCOME BACK</p>
         <p className="login-text">Log into your account</p>
+
+        {isPopup ? (
+          <div className="close-container" onClick={() => closePopup!(false)}>
+            <Icon icon="lucide:x" />
+          </div>
+        ) : null}
 
         <InputField
           value={email}
