@@ -31,7 +31,7 @@ const Feed = () => {
 
           <ComposeCard />
 
-          <div className="user-feed-list">
+          <div className={`user-feed-list ${isModalOpen ? "modal-open" : ""}`}>
             {postsData?.map((post) => (
               <div onClick={openModal}>
                 <UserFeedCard key={post.userName} {...post} />

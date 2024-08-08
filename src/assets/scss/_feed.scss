@@ -22,6 +22,12 @@
           font-weight: 300;
         }
       }
+
+      .modal-open {
+        .user-feed-card {
+          border: 0;
+        }
+      }
     }
   }
 }
@@ -33,6 +39,7 @@
   padding: 1.5rem;
   margin-bottom: 0.875rem;
   border: 2px solid $theme-border;
+  transition: border 0.2s ease;
 
   .card-header {
     display: flex;
