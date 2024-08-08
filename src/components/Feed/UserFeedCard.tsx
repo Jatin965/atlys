@@ -18,7 +18,6 @@ const UserFeedCard: React.FC<CardProps> = ({
   userName,
   postTime,
   isEdited = false,
-  menuOptions,
   emoji,
   content,
   commentCount,
