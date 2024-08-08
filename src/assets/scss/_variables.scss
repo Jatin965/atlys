@@ -4,3 +4,9 @@ $theme-black: #191920;
 $theme-white-one: #c5c7ca;
 $theme-white-two: #7f8084;
 $theme-border: #35373b;
+
+// Mixins
+
+@mixin border-gradient() {
+  background: linear-gradient(129.59deg, #969696 0%, #343434 98.18%);
+}

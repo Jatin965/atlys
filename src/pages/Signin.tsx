@@ -1,9 +1,15 @@
+import SigninCard from "../components/SigninCard";
+
 const Signin = () => {
   return (
     <div className="signin">
       <div className="signin-container">
-        <div className="signin-card">
-          <p className="">WELCOME BACK</p>
+        <div className="card-wrapper">
+          <div className="logo">
+            <img src="/logo.png" alt="" />
+          </div>
+
+          <SigninCard />
         </div>
       </div>
     </div>

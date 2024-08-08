@@ -1,0 +1,26 @@
+// Input Field Start
+.input-field {
+  .label-forgot-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .input-wrapper {
+    position: relative;
+
+    .password-input {
+      padding-right: 2rem;
+    }
+
+    .password-toggle-icon {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+  }
+}
+
+// Input Field End
