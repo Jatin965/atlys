@@ -29,7 +29,9 @@ const Feed = () => {
             </p>
           </div>
 
-          <ComposeCard />
+          <div onClick={openModal}>
+            <ComposeCard />
+          </div>
 
           <div className={`user-feed-list ${isModalOpen ? "modal-open" : ""}`}>
             {postsData?.map((post) => (
