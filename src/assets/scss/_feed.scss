@@ -8,7 +8,20 @@
     max-width: 700px;
     margin-inline: auto;
 
-    .content-wrapper {
+    .content {
+      margin-top: 3rem;
+      .welcome-msg {
+        .user-text {
+          font-size: 1.75rem;
+          font-weight: 400;
+          line-height: 118.75%;
+          margin: 0;
+        }
+        .sub-text {
+          color: $theme-white-two;
+          font-weight: 300;
+        }
+      }
     }
   }
 }
@@ -18,7 +31,7 @@
   background-color: $theme-grey;
   border-radius: 8px;
   padding: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.875rem;
   border: 2px solid $theme-border;
 
   .card-header {
@@ -82,12 +95,14 @@
     .text-content {
       color: $theme-white-two;
       line-height: 150%;
+      font-weight: 300;
     }
   }
 
   .card-footer {
     p {
       font-size: 0.875rem;
+      font-weight: 300;
       line-height: 118.75%;
       color: $theme-white-two;
       margin: 0;
@@ -95,5 +110,55 @@
       align-items: center;
       gap: 0.25rem;
     }
+  }
+}
+
+// Feed Card End
+
+// Compose Card Start
+.compose-card {
+  background-color: $theme-grey;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.875rem;
+  border: 2px solid $theme-border;
+
+  .input-wrapper {
+    margin: 1rem 0;
+    background-color: $theme-black-two;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .emoji-avatar {
+      height: 3rem;
+      width: 3rem;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      background-color: $theme-grey;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    input {
+      font-size: 1rem;
+      color: $theme-white-one;
+      padding: 0.75rem;
+      background: none;
+      outline: none;
+      box-shadow: none;
+      border: none;
+      width: fill-available;
+      width: -moz-available;
+      width: -webkit-fill-available;
+    }
+  }
+
+  .btn-wrapper {
+    text-align: right;
   }
 }

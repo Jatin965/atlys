@@ -1,6 +1,7 @@
 import React from "react";
 import { postsData } from "../assets/helpers/StaticData";
 import UserFeedCard from "../components/Feed/UserFeedCard";
+import ComposeCard from "../components/Feed/ComposeCard";
 
 const Feed = () => {
   return (
@@ -15,7 +16,7 @@ const Feed = () => {
             </p>
           </div>
 
-          <div className="compose-card"></div>
+          <ComposeCard />
 
           <div className="user-feed-list">
             {postsData?.map((post) => (
